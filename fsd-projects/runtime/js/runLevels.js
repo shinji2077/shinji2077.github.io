@@ -18,10 +18,16 @@ var runLevels = function (window) {
 
     // TODOs 5 through 11 go here
     // BEGIN EDITING YOUR CODE HERE
-
+    var hitZoneSize = 25;
+    var damageFromObstacle = 10;
+    var sawBladeHitZone = game.createObstacle(hitZoneSize,
+      damageFromObstacle);
+      var sawBladeHitZone.x = 400;
+      var sawBladeHitZone.y = 100;
+      var game.addGameItem(sawBladeHitZone);
     
 
-    function startLevel() {
+    function startLevel() {7-+-2
       // TODO 13 goes below here
 
 

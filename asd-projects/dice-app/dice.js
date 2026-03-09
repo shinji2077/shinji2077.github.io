@@ -11,8 +11,8 @@ $(document).ready(function () {
   .appendTo(elementID);
   }
 
-function rollDie(dieId) {
-  $(dieId).empty();
+function rollDie(dieID) {
+  $(dieID ).empty();
 
   var randomNum = Math.ceil(Math.random() * 6);
   console.log(randomNum);
@@ -37,14 +37,20 @@ function rollDie(dieId) {
   makeDot(25, 25, dieID); // top left
   makeDot(25, 75, dieID); // bottom left
   makeDot(75, 25, dieID); // top right
+}  else if (randomNum === 6) {
+  makeDot(25, 25, dieID); // top right
+  makeDot(50, 25, dieID); // middle left
+  makeDot(75, 25, dieID); // bottom left
+  makeDot(25, 75, dieID); // top right
+  makeDot(50, 75, dieID); // middle right
+  makeDot(75, 75, dieID); // bottom right 
 }
-
 }
-
 function handleClick() {
-    rollDie("#die");
+  rollDie("#die");
 }
 
 // Call it to test
 $("#die").on("click", handleClick);
+
 });
